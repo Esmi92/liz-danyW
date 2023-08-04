@@ -1,5 +1,13 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Code+Pro:wght@200&display=swap');
+
+/*---Landing Page----*/
+.LandingPage {
   text-align: center;
+  height: 100vh;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(90deg, rgba(9, 9, 121, 1) 0%, rgba(9, 9, 121, 1) 23%, rgba(2, 0, 36, 1) 100%, rgba(0, 212, 255, 1) 100%);
+  color: white;
+  font-family: 'barlow';
 }
 
 .App-logo {
@@ -13,26 +21,50 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.invitationText {
+  font-size: 3vh;
 }
 
-.App-link {
-  color: #61dafb;
+.welcome {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(7px + 2vmin);
+  color: white;
+  height: 95%;
 }
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.appFooter {
+  font-family: 'barlow';
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 2vh;
+}
+
+@media only screen and (max-width:600px) {
+  .appFooter {
+    font-size: 1vh;
+  }
+
+  .welcome {
+    flex-direction: column;
+  }
+
+  .invitationText {
+    font-size: 4vh;
+  }
+  #date{
+    font-size: 3vh;
   }
 }
