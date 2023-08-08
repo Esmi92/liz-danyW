@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 
-import LandingPage from "./components/LandingPage";
-import './App.css';
+import LandingPage from "./pages/LandingPage";
+import InvitationHome from "./pages/InvitationHome";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<InvitationHome />} />
         </Routes>
         <Outlet />
       </BrowserRouter>
