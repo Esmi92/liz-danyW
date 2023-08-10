@@ -9,6 +9,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import DateCountdown from './components/DateCountdown';
 import Venue from './components/Venue';
+import Protocol from './components/Protocol';
+
 import desktopImage from '../assets/headerImage.jpg';
 import celImage from '../assets/foto1.PNG';
 import Logo from '../logo.svg';
@@ -31,7 +33,7 @@ function InvitationHome() {
   const menuFont = ipad ? "2vh" : "3vh";
 
   useEffect(() => {
-    if(!location.state ){
+    if (!location.state) {
       navigate("/")
     }
   }, [])
@@ -67,7 +69,10 @@ function InvitationHome() {
     fontFamily: 'barlow',
     fontSize: menuFont,
     maxWidth: 'none',
-    color: '#f9f7f3'
+    color: '#f9f7f3',
+    '&:hover': {
+      opacity: "0.6"
+    }
   }));
 
   return (
@@ -82,15 +87,15 @@ function InvitationHome() {
       </div>
       <div className='MainContentContainer'>
         <div className='frontInvitation'>
-         <DateCountdown />
+          <DateCountdown />
         </div>
         <div className='MenuDiv'>
-          {matches ? 
-          <Tabs
-            centered
-            fullWidth
-            onChange={handleChange} value={false}>
-            <Tab label={<img src={Logo} alt='logo' />} value={0} /> </Tabs> :
+          {matches ?
+            <Tabs
+              centered
+              fullWidth
+              onChange={handleChange} value={false}>
+              <Tab label={<img src={Logo} alt='logo' />} value={0} /> </Tabs> :
             <Tabs
               centered
               onChange={handleChange} value={false}>
@@ -109,11 +114,11 @@ function InvitationHome() {
         <div className='frontInvitation'>
           <Divider style={{ marginBottom: 15 }} variant='middle' />
           <div ref={VenueRef} />
-          <Venue />
+          <Venue matches={matches}/>
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={DressCodeRef} />
-          <h1>Dresscode</h1>
+          <Protocol matches={matches}/>
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={AccomodationRef} />
@@ -130,7 +135,7 @@ function InvitationHome() {
           <Divider style={{ marginTop: 15 }} variant='middle' />
         </div>
       </div>
-      
+
     </div>
   );
 }

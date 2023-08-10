@@ -1,17 +1,33 @@
+import Map from './Map';
+import VenuePhotoURL1 from '../../assets/venue1.PNG';
+import VenuePhotoURL2 from '../../assets/venue2.PNG';
+import VenuePhotoURL3 from '../../assets/venue3.PNG';
+
 import Divider from '@mui/material/Divider';
-import VenuePhotoURL1 from '../../assets/venue1.PNG'
-import VenuePhotoURL2 from '../../assets/venue2.PNG'
-import VenuePhotoURL3 from '../../assets/venue3.PNG'
-import { Grid } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import ChurchIcon from '@mui/icons-material/Church';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
 import FlatwareIcon from '@mui/icons-material/Flatware';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import IconButton from '@mui/material/IconButton';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-const mainColor = '#073D69'
+const mainColor = '#073D69';
+const maps = "https://goo.gl/maps/T2m1H9T3hVWK7vVN9";
+const intagram = "https://instagram.com/puntaluna.grupoparaiso?igshid=MzRlODBiNWFlZA==";
+
+const onClick = (type) => {
+    if (type == "map") {
+        window.open(maps, "_blank");
+    } else {
+        window.open(intagram, "_blank");
+    }
+};
 
 function CarouselCard(props) {
     return (
@@ -20,7 +36,7 @@ function CarouselCard(props) {
         </div >
     )
 }
-function Itinerary(props) {
+function Itinerary() {
 
     return (
         <div>
@@ -63,7 +79,7 @@ function Itinerary(props) {
     )
 }
 
-export default function VenueComponent() {
+export default function VenueComponent({matches}) {
     return (
         <div className='VenueComponent'>
             <div className='itinerarySection'>
@@ -83,11 +99,26 @@ export default function VenueComponent() {
                     </Swiper>
                 </div>
             </div>
-            <p className='VenueDescription'>
-                <b>Punta Luna by Grupo Paraiso</b><br />
-                En algun lugar No 666<br />de un gran país<br />En no se donde CP.XXX <br />
+            <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
 
-            </p>
+            <div className='address'>
+                <div className='VenueDescriptionContainer'>
+                    <p className='VenueDescription'>
+                        <b>Punta Luna by Grupo Paraiso</b><br />
+                        Jiutepec 476,<br /> Jose G. Parres,<br />62564 Jiutepec, Mor<br />
+                    </p>
+                    <div>
+                        <IconButton onClick={onClick}>
+                            <InstagramIcon style={{ fontSize: "6vh", color: mainColor }} />
+                        </IconButton>
+                        <IconButton onClick={() => { onClick("map") }}>
+                            <LocationOnIcon style={{ fontSize: "6vh", color: mainColor }} />
+                        </IconButton>
+                    </div>
+                </div>
+                { !matches ?  <Map /> : ''}
+               
+            </div>
         </div>
     )
 }
