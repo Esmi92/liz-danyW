@@ -64,6 +64,7 @@ function InvitationHome() {
       case 5:
         RSVPRef?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
         break;
+      default:
     }
     console.log(newValue);
   };
