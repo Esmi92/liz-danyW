@@ -10,6 +10,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import DateCountdown from './components/DateCountdown';
 import Venue from './components/Venue';
 import Protocol from './components/Protocol';
+import Hotels from './components/Hotels';
+import Footer from './Footer';
+import Gifts from './components/Gifts';
+import Quote from './components/Quote';
+import Rsvp from './components/Rsvp';
 
 import desktopImage from '../assets/headerImage.jpg';
 import celImage from '../assets/foto1.PNG';
@@ -66,7 +71,7 @@ function InvitationHome() {
     <Tab {...props} />
   ))(({ theme }) => ({
     textTransform: 'none',
-    fontFamily: 'barlow',
+    fontFamily: 'Barlow',
     fontSize: menuFont,
     maxWidth: 'none',
     color: '#f9f7f3',
@@ -81,7 +86,7 @@ function InvitationHome() {
         <div className='photoComponent'>
           <img className='photo' src={photo} alt="Liz y Dany" />
           <div className='titleContainer'>
-            <div className='title'>Lizzette & Daniel</div>
+            <div className='title'>Lizzete & Daniel</div>
           </div>
         </div>
       </div>
@@ -113,29 +118,32 @@ function InvitationHome() {
         </div>
         <div className='frontInvitation'>
           <Divider style={{ marginBottom: 15 }} variant='middle' />
+          <Quote />
+          <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={VenueRef} />
-          <Venue matches={matches}/>
+          <Venue matches={matches} />
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={DressCodeRef} />
-          <Protocol matches={matches}/>
+          <Protocol matches={matches} />
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={AccomodationRef} />
-          <h1>Hospedaje</h1>
+          <Hotels matches={matches} />
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={GiftsRef} />
-          <h1>Regalos</h1>
+          <Gifts matches={matches} />
 
           <Divider style={{ marginTop: 15 }} variant='middle' />
           <div ref={RSVPRef} />
-          <h1>RSVP</h1>
+          <Rsvp />
 
           <Divider style={{ marginTop: 15 }} variant='middle' />
+          <Footer />
         </div>
-      </div>
 
+      </div>
     </div>
   );
 }

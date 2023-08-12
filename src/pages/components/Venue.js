@@ -11,6 +11,7 @@ import FlatwareIcon from '@mui/icons-material/Flatware';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -51,7 +52,7 @@ function Itinerary() {
                     <ChurchIcon style={{ fontSize: "9vh", color: mainColor }} />
                 </Grid>
             </Grid>
-            <Divider variant='middle' style={{ borderWidth: 2, borderColor: mainColor }} />
+            <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor }} />
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
                 <Grid xs={8} >
                     <div className='VenueDescription Itinerary'>
@@ -64,7 +65,7 @@ function Itinerary() {
                     <LocalBarIcon style={{ fontSize: "9vh", color: mainColor }} />
                 </Grid>
             </Grid>
-            <Divider variant='middle' style={{ borderWidth: 2, borderColor: mainColor }} />
+            <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor }} />
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
                 <Grid xs={8} className='VenueDescription Itinerary'>
                     <b >Cena</b> <br />
@@ -79,7 +80,7 @@ function Itinerary() {
     )
 }
 
-export default function VenueComponent({matches}) {
+export default function VenueComponent({ matches }) {
     return (
         <div className='VenueComponent'>
             <div className='itinerarySection'>
@@ -108,16 +109,20 @@ export default function VenueComponent({matches}) {
                         Jiutepec 476,<br /> Jose G. Parres,<br />62564 Jiutepec, Mor<br />
                     </p>
                     <div>
-                        <IconButton onClick={onClick}>
-                            <InstagramIcon style={{ fontSize: "6vh", color: mainColor }} />
-                        </IconButton>
-                        <IconButton onClick={() => { onClick("map") }}>
-                            <LocationOnIcon style={{ fontSize: "6vh", color: mainColor }} />
-                        </IconButton>
+                        <Tooltip title="Instagram">
+                            <IconButton onClick={onClick}>
+                                <InstagramIcon style={{ fontSize: "6vh", color: mainColor }} />
+                            </IconButton>
+                        </Tooltip>
+                        <Tooltip title="Maps">
+                            <IconButton onClick={() => { onClick("map") }}>
+                                <LocationOnIcon style={{ fontSize: "6vh", color: mainColor }} />
+                            </IconButton>
+                        </Tooltip>
                     </div>
                 </div>
-                { !matches ?  <Map /> : ''}
-               
+                {!matches ? <Map /> : ''}
+
             </div>
         </div>
     )
