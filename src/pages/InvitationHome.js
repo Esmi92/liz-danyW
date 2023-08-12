@@ -100,7 +100,6 @@ function InvitationHome() {
           {matches ?
             <Tabs
               centered
-              fullWidth
               onChange={handleChange} value={false}>
               <Tab label={<img src={Logo} alt='logo' />} value={0} /> </Tabs> :
             <Tabs
