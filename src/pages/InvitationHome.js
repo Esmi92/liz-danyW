@@ -98,10 +98,8 @@ function InvitationHome() {
         </div>
         <div className='MenuDiv'>
           {matches ?
-            <Tabs
-              centered
-              onChange={handleChange} value={false}>
-              <Tab label={<img src={Logo} alt='logo' />} value={0} /> </Tabs> :
+            <img src={Logo} alt='logo' className='logoInvitation'/> 
+            :
             <Tabs
               centered
               onChange={handleChange} value={false}>
