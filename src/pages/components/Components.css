@@ -431,6 +431,10 @@
     .dresscodeSection {
         width: 100%;
     }
+
+    .ProtocolDescription {
+        font-size: 2.2vh;
+    }
 }
 
 /*---HOTELS---*/
