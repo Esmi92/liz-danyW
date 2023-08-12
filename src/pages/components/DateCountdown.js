@@ -34,7 +34,7 @@ export default function DateCountdown(props) {
         return () => {
             clearInterval(sampleInterval);
         };
-    }, []);
+    }, [startingSeconds]);
 
     return (
         <div className='dateHourContainer'>

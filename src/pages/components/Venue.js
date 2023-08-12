@@ -23,7 +23,7 @@ const maps = "https://goo.gl/maps/T2m1H9T3hVWK7vVN9";
 const intagram = "https://instagram.com/puntaluna.grupoparaiso?igshid=MzRlODBiNWFlZA==";
 
 const onClick = (type) => {
-    if (type == "map") {
+    if (type === "map") {
         window.open(maps, "_blank");
     } else {
         window.open(intagram, "_blank");

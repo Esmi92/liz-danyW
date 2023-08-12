@@ -23,7 +23,7 @@ import './components/Components.css';
 
 function InvitationHome() {
   const location = useLocation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const matches = useMediaQuery('(max-width:600px)');
   const ipad = useMediaQuery('(max-width:900px)');
 
@@ -41,6 +41,7 @@ function InvitationHome() {
     if (!location.state) {
       navigate("/")
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const handleChange = (e, newValue) => {
