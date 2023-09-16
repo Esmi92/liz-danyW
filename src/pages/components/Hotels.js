@@ -4,6 +4,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
+import branch from '../../assets/branch.svg';
 
 const mainColor = '#073D69';
 
@@ -48,7 +49,10 @@ export default function Hotels({ matches }) {
 
     return (
         <div className='Hotels'>
-            <p className="SectionTitle">HOSPEDAJE</p>
+            <div className='dynamicTitle'>
+                <p className="SectionTitle">HOSPEDAJE</p>
+                {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+            </div>
             <div className='HotelsDescription'>
                 <p>Para facilitar tu estancia tenemos convenio con los siguientes hoteles:</p>
                 <p>Mencionar el código de reservación:<br />
@@ -65,9 +69,8 @@ export default function Hotels({ matches }) {
                 </div>
                 {matches
                     ? <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor, width: dividerWidth }} />
-                    : <div className='HotelDivider'>
-                        <Divider orientation="vertical" variant='middle' style={{ borderWidth: 1, borderColor: mainColor, height: "20vh" }} />
-                    </div>}
+                    :
+                    <img src={branch} className="GiftLogo" alt="logo" />}
                 <div className='HotelsDescription HotelDetailsContainer'>
                     <p>
                         <b>Hotel2</b> <br />

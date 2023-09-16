@@ -1,6 +1,6 @@
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import PaymentsIcon from '@mui/icons-material/Payments';
-import logo from '../../logo.svg';
+import branch from '../../assets/branch.svg';
 
 const mainColor = '#073D69';
 const iconFontSize = "9vh";
@@ -36,12 +36,15 @@ export default function Gifts({ matches }) {
 
     return (
         <div>
-            <p className="SectionTitle">REGALOS</p>
+            <div className='dynamicTitle'>
+                <p className="SectionTitle">REGALOS</p>
+                {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+            </div>
             <p className="giftsThanks">Muchas gracias por acompañarnos. Si quieres tener un detalle estas son las opciones que tenemos: </p>
 
             <div className='CardsSection'>
                 {card(mesa)}
-                {matches ? null : <img src={logo} className="GiftLogo" alt="logo" />}
+                {matches ? null : <img src={branch} className="GiftLogo" alt="logo" />}
                 {card(banco)}
             </div>
         </div>

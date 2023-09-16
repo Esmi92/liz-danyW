@@ -5,6 +5,7 @@ import VenuePhotoURL3 from '../../assets/venue3.PNG';
 
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
+import PublicIcon from '@mui/icons-material/Public';
 import ChurchIcon from '@mui/icons-material/Church';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
 import FlatwareIcon from '@mui/icons-material/Flatware';
@@ -18,13 +19,18 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
+import puntaLuna from '../../assets/LogoPuntaLuna.svg'
+
 const mainColor = '#073D69';
+const pagina = 'https://grupoparaiso.mx/punta-luna/'
 const maps = "https://goo.gl/maps/T2m1H9T3hVWK7vVN9";
 const intagram = "https://instagram.com/puntaluna.grupoparaiso?igshid=MzRlODBiNWFlZA==";
 
 const onClick = (type) => {
     if (type === "map") {
         window.open(maps, "_blank");
+    } else if (type === "page") {
+        window.open(pagina, "_blank");
     } else {
         window.open(intagram, "_blank");
     }
@@ -43,7 +49,7 @@ function Itinerary() {
         <div>
             <p className='VenueTitle'>SABADO 28</p>
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
-                <Grid xs={8} className='VenueDescription Itinerary'>
+                <Grid xs={8} className='VenueData Itinerary'>
                     <b>Misa <br /></b>
                     localidad <br />
                     5:30pm
@@ -55,7 +61,7 @@ function Itinerary() {
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor }} />
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
                 <Grid xs={8} >
-                    <div className='VenueDescription Itinerary'>
+                    <div className='VenueData Itinerary'>
                         <b>Recepción<br /></b>
                         localidad<br />
                         hora
@@ -67,7 +73,7 @@ function Itinerary() {
             </Grid>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor }} />
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
-                <Grid xs={8} className='VenueDescription Itinerary'>
+                <Grid xs={8} className='VenueData Itinerary'>
                     <b >Cena</b> <br />
                     Localidad<br />
                     hora
@@ -104,11 +110,19 @@ export default function VenueComponent({ matches }) {
 
             <div className='address'>
                 <div className='VenueDescriptionContainer'>
+                    <img src={puntaLuna} className="puntaLunaLogo" alt="puntaLuna" />
                     <p className='VenueDescription'>
                         <b>Punta Luna by Grupo Paraiso</b><br />
-                        Jiutepec 476,<br /> Jose G. Parres,<br />62564 Jiutepec, Mor<br />
+                    </p>
+                    <p className='VenueDetails'>
+                        <div>Jiutepec 476,<br /> Jose G. Parres,<br />62564 Jiutepec, Mor</div><br />
                     </p>
                     <div>
+                        <Tooltip title="Pagina">
+                            <IconButton onClick={() => { onClick("page")}}>
+                                <PublicIcon style={{ fontSize: "6vh", color: mainColor }} />
+                            </IconButton>
+                        </Tooltip>
                         <Tooltip title="Instagram">
                             <IconButton onClick={onClick}>
                                 <InstagramIcon style={{ fontSize: "6vh", color: mainColor }} />

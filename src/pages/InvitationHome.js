@@ -18,7 +18,9 @@ import Rsvp from './components/Rsvp';
 
 import desktopImage from '../assets/headerImage.jpg';
 import celImage from '../assets/foto1.PNG';
-import Logo from '../logo.svg';
+import liz from '../assets/liz.svg';
+import and from '../assets/and.svg';
+import dany from '../assets/dany.svg';
 import './components/Components.css';
 
 function InvitationHome() {
@@ -98,17 +100,21 @@ function InvitationHome() {
         </div>
         <div className='MenuDiv'>
           {matches ?
-            <img src={Logo} alt='logo' className='logoInvitation'/> 
+            <div className='logoSectionMobil'>
+              <img src={liz} alt='logo' className='logoInvitationMobil2' />
+              <img src={and} alt='logo' className='logoInvitationMobil' />
+              <img src={dany} alt='logo' className='logoInvitationMobil' />
+
+            </div>
             :
             <Tabs
               centered
               onChange={handleChange} value={false}>
-              <Tab label={<img src={Logo} alt='logo' />} value={0} />
               <StyledTab label={"Evento"} value={1} />
               <Divider orientation="vertical" variant='middle' flexItem />
-              <StyledTab label={"Protocolo"} value={4} />
-              <Divider orientation="vertical" variant='middle' flexItem />
               <StyledTab label={"Hospedaje"} value={3} />
+              <Divider orientation="vertical" variant='middle' flexItem />
+              <StyledTab label={"Protocolo"} value={4} />
               <Divider orientation="vertical" variant='middle' flexItem />
               <StyledTab label={"Regalos"} value={2} />
               <Divider orientation="vertical" variant='middle' flexItem />
@@ -123,12 +129,12 @@ function InvitationHome() {
           <Venue matches={matches} />
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
-          <div ref={DressCodeRef} />
-          <Protocol matches={matches} />
-
-          <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={AccomodationRef} />
           <Hotels matches={matches} />
+
+          <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
+          <div ref={DressCodeRef} />
+          <Protocol matches={matches} />
 
           <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
           <div ref={GiftsRef} />
@@ -136,7 +142,7 @@ function InvitationHome() {
 
           <Divider style={{ marginTop: 15 }} variant='middle' />
           <div ref={RSVPRef} />
-          <Rsvp />
+          <Rsvp matches={matches} />
 
           <Divider style={{ marginTop: 15 }} variant='middle' />
           <Footer />

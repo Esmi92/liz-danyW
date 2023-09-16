@@ -41,7 +41,7 @@ function LandingPage() {
             <header className="welcome">
                 <img src={logo} className="App-logo" alt="logo" />
                 <div>
-                    <p className="invitationText">Estas cordialmente <br /> invitado</p>
+                    <p className="invitationText">¡Acompañanos en nuestro <br /> gran día!</p>
                     <p id="date">28 . 09 . 24</p>
                     <TextField
                         onChange={onChange}
