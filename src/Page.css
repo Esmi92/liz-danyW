@@ -8,6 +8,10 @@
   color: #073D69;
 }
 
+::-ms-reveal {
+  display: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

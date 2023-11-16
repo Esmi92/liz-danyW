@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import IconButton from '@mui/material/IconButton';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 
@@ -14,6 +16,7 @@ function LandingPage() {
 
     const [input, setInput] = useState("")
     const [isError, setIsError] = useState(false)
+    const [viewPass, setViewPass] = useState(false)
     const navigate = useNavigate();
 
     const onChange = (e) => {
@@ -47,7 +50,7 @@ function LandingPage() {
                         onChange={onChange}
                         onKeyDown={redirectEnter}
                         id="event-password"
-                        type="password"
+                        type={viewPass ? "text" : "password"}
                         size="small"
                         error={isError}
                         helperText={isError ? "código incorrecto" : null}
@@ -64,6 +67,28 @@ function LandingPage() {
                         }}
                         InputProps={{
                             endAdornment: <InputAdornment position="end">
+                                <IconButton
+                                    onClick={() => {
+                                        if (viewPass) {
+                                            setViewPass(false)
+                                        } else {
+                                            setViewPass(true)
+                                        }
+                                    }}
+                                    sx={{
+                                        "&:hover": {
+                                            backgroundColor: "#D9E0E6",
+                                            opacity: 0.75
+                                        }
+                                    }}>
+                                    {viewPass
+                                        ? <VisibilityOffIcon sx={{
+                                            color: "#140152"
+                                        }} />
+                                        : <VisibilityIcon sx={{
+                                            color: "#140152"
+                                        }} />}
+                                </IconButton>
                                 <IconButton
                                     onClick={redirectClick}
                                     sx={{
