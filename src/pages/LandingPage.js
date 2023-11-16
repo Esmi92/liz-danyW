@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 
 import { useNavigate } from "react-router-dom";
 
-import logo from '../logo.svg';
+import logo from '../logov2.svg';
 import Footer from './Footer';
 import '../Page.css';
 

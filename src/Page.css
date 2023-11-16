@@ -2,10 +2,10 @@
 .LandingPage {
   text-align: center;
   height: 100vh;
-  background: rgb(64, 136, 192);
-  background: linear-gradient(90deg, rgba(64, 136, 192, 1) 0%, rgba(7, 61, 105, 1) 100%);
-  color: #f9f7f3;
+  background-image: url('./assets/pattern.png');
+  background-color: #f9f7f3;
   font-family: 'Barlow';
+  color: #073D69;
 }
 
 .App-logo {
