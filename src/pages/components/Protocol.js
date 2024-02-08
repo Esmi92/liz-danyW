@@ -2,7 +2,7 @@ import NotInterestedIcon from '@mui/icons-material/NotInterested';
 import Divider from '@mui/material/Divider';
 import branch from '../../assets/branch.svg';
 
-const mainColor = '#073D69';
+const mainColor = '#0b2c55';
 
 export default function Protocol({ matches }) {
     const dividerWidth = matches ? "80%" : "50%";

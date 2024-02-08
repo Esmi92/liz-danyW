@@ -21,7 +21,7 @@ import 'swiper/css/autoplay';
 
 import puntaLuna from '../../assets/LogoPuntaLuna.svg'
 
-const mainColor = '#073D69';
+const mainColor = '#0b2c55';
 const pagina = 'https://grupoparaiso.mx/punta-luna/'
 const maps = "https://goo.gl/maps/T2m1H9T3hVWK7vVN9";
 const intagram = "https://instagram.com/puntaluna.grupoparaiso?igshid=MzRlODBiNWFlZA==";

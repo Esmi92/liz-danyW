@@ -6,7 +6,7 @@ import liz from '../../assets/lizRsvp.svg';
 import dany from '../../assets/danyRsvp.svg';
 import branch from '../../assets/branch.svg';
 
-const mainColor = '#073D69';
+const mainColor = '#0b2c55';
 const secondColor = '#c7d6e2';
 var regex = /^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/;
 

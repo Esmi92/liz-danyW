@@ -44,8 +44,8 @@ function LandingPage() {
             <header className="welcome">
                 <img src={logo} className="App-logo" alt="logo" />
                 <div>
-                    <p className="invitationText">¡Acompañanos en nuestro <br /> gran día!</p>
-                    <p id="date">28 . 09 . 24</p>
+                    <p>¡Acompañanos en nuestro <br /> gran día!</p>
+                    <p>28 . 09 . 24</p>
                     <TextField
                         onChange={onChange}
                         onKeyDown={redirectEnter}
@@ -56,14 +56,15 @@ function LandingPage() {
                         helperText={isError ? "código incorrecto" : null}
                         value={input}
                         placeholder='Código del evento'
-                        variant="filled"
+                        variant="outlined"
                         sx={{
-                            backgroundColor: "#bfd7ea",
                             opacity: 1.5,
                             borderRadius: "5px",
-                            input: {
-                                color: '#140152'
-                            }
+                            "& .MuiOutlinedInput-root": {
+                                "&.Mui-focused fieldset": {
+                                  borderColor: "#C59C5A"
+                                }
+                              }
                         }}
                         InputProps={{
                             endAdornment: <InputAdornment position="end">

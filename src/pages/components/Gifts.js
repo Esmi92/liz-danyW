@@ -2,7 +2,7 @@ import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import branch from '../../assets/branch.svg';
 
-const mainColor = '#073D69';
+const mainColor = '#0b2c55';
 const iconFontSize = "9vh";
 
 const mesa = {

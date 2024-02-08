@@ -3,9 +3,9 @@
   text-align: center;
   height: 100vh;
   background-image: url('./assets/pattern.png');
-  background-color: #f9f7f3;
-  font-family: 'Barlow';
-  color: #073D69;
+  background-color: #F9ECDD;
+  font-family: 'Goudy Bookletter 1911';
+  color: #0b2c55;
 }
 
 ::-ms-reveal {
@@ -48,7 +48,6 @@
 
 @media only screen and (max-width:600px) {
   .appFooter {
-    font-family: 'Barlow';
     font-size: 1vh;
   }
 
@@ -70,7 +69,8 @@
 
 .frontInvitation {
   background-image: url('./assets/pattern.png');
-  background-color: #f9f7f3;
+  background-color: #F9ECDD;
+  ;
 }
 
 .MenuDiv {
@@ -78,7 +78,7 @@
   position: sticky;
   z-index: 5000;
   top: 0;
-  background-color: #073D69;
+  background-color: #0b2c55;
 }
 
 .MainContentContainer {

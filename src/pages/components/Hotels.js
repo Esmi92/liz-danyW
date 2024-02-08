@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import branch from '../../assets/branch.svg';
 
-const mainColor = '#073D69';
+const mainColor = '#0b2c55';
 
 export default function Hotels({ matches }) {
     const dividerWidth = matches ? "80%" : "80%";

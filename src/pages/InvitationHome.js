@@ -17,7 +17,7 @@ import Quote from './components/Quote';
 import Rsvp from './components/Rsvp';
 
 import desktopImage from '../assets/headerImage.jpg';
-import celImage from '../assets/foto1.PNG';
+import celImage from '../assets/mainMobile.jpg';
 import liz from '../assets/liz.svg';
 import and from '../assets/and.svg';
 import dany from '../assets/dany.svg';
@@ -90,7 +90,13 @@ function InvitationHome() {
         <div className='photoComponent'>
           <img className='photo' src={photo} alt="Liz y Dany" />
           <div className='titleContainer'>
-            <div className='title'>Lizzete & Daniel</div>
+            <div className='title'>
+            <div className='logoSectionMobil'>
+              <img src={liz} alt='logo' className='logoInvitationMobil2' />
+              <img src={and} alt='logo' className='logoInvitationMobil' />
+              <img src={dany} alt='logo' className='logoInvitationMobil' />
+            </div>
+            </div>
           </div>
         </div>
       </div>
