@@ -16,7 +16,6 @@ import Gifts from './components/Gifts';
 import Quote from './components/Quote';
 import Rsvp from './components/Rsvp';
 
-import desktopImage from '../assets/headerImage.jpg';
 import celImage from '../assets/mainMobile.jpg';
 import liz from '../assets/liz.svg';
 import and from '../assets/and.svg';
