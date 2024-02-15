@@ -3,7 +3,7 @@
   text-align: center;
   height: 100vh;
   background-image: url('./assets/pattern.png');
-  background-color: #F9ECDD;
+  background-color: #FCFBFA;
   font-family: 'Goudy Bookletter 1911';
   color: #0b2c55;
 }
@@ -69,7 +69,7 @@
 
 .frontInvitation {
   background-image: url('./assets/pattern.png');
-  background-color: #F9ECDD;
+  background-color: #FCFBFA;
   ;
 }
 

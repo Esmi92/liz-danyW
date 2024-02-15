@@ -36,7 +36,8 @@ function InvitationHome() {
   const DressCodeRef = useRef(null);
   const RSVPRef = useRef(null);
 
-  const photo = matches ? celImage : desktopImage;
+  const photo = celImage 
+  //matches ? celImage : desktopImage;
   const menuFont = ipad ? "2vh" : "3vh";
 
   useEffect(() => {
@@ -89,6 +90,7 @@ function InvitationHome() {
       <div className='PhotoContainer'>
         <div className='photoComponent'>
           <img className='photo' src={photo} alt="Liz y Dany" />
+          {!matches && <img className='photo' src={photo} alt="Liz y Dany" />}
           <div className='titleContainer'>
             <div className='title'>
             <div className='logoSectionMobil'>
