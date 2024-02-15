@@ -11,7 +11,7 @@ function SavetheDate() {
                 <p><b>SAVE THE DATE</b></p>
                     <p>¡Acompañanos en nuestro <br /> gran día!</p>
                     <p>28 . 09 . 24</p>
-                    <div className='stdAdress'>Jiutepec 476,Jose G. Parres, 62564 Jiutepec, Mor</div>
+                    <div className='stdAdress'>Jiutepec, Morelos</div>
                   
                 </div>
             </header>
