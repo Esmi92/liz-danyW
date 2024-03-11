@@ -1,10 +1,10 @@
-import logo from '../../logov2.svg'
+import { MainLogo } from "./MainLogo"
 
 export default function Quote() {
 
   return (
     <div className="QuoteDiv">
-      <img src={logo} className="QuoteLogo" alt="logo" />
+      <MainLogo />
       <div>
         <p className="QuoteText">Cada Familia tiene una historia <br/> <b>Bienvenidos a la nuestra</b></p>
         <p className="QuoteAuthor"></p>

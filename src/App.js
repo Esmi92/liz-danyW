@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
 import InvitationHome from "./pages/InvitationHome";
-import SavetheDate from "./pages/SavetheDate";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/home" element={<InvitationHome />} />
-          <Route path="/saveTheDate" element={<SavetheDate />} />
         </Routes>
         <Outlet />
       </BrowserRouter>

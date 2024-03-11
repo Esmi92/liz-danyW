@@ -5,11 +5,13 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
+import { Date } from './components/Date';
 
 import { useNavigate } from "react-router-dom";
 
-import logo from '../logov2.svg';
+import flores from '../assets/Flores.png'
 import Footer from './Footer';
+import { MainLogo } from './components/MainLogo';
 import '../Page.css';
 
 function LandingPage() {
@@ -41,11 +43,15 @@ function LandingPage() {
     }
     return (
         <div className="LandingPage">
+        <img src={flores} className='flowers fTop'/>
             <header className="welcome">
-                <img src={logo} className="App-logo" alt="logo" />
+                <MainLogo />
                 <div>
-                    <p>¡Acompañanos en nuestro <br /> gran día!</p>
-                    <p>28 . 09 . 24</p>
+                    <p className='initialText' >Con la bendicion de Dios 
+                        <br /> y nuestras familias 
+                        <br/> tenemos el gusto de 
+                        <br/> invitarte a nuestra boda</p>
+                    <Date />
                     <TextField
                         onChange={onChange}
                         onKeyDown={redirectEnter}
@@ -62,8 +68,9 @@ function LandingPage() {
                             borderRadius: "5px",
                             "& .MuiOutlinedInput-root": {
                                 "&.Mui-focused fieldset": {
-                                  borderColor: "#C59C5A"
-                                }
+                                  borderColor: "#9D7F63"
+                                },
+                                fontFamily: "Cormorant Garamond"
                               }
                         }}
                         InputProps={{
@@ -107,6 +114,7 @@ function LandingPage() {
                     />
                 </div>
             </header>
+            <img src={flores} className='flowers fDowm'/>
             <Footer />
         </div>
     );

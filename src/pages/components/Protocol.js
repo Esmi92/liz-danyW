@@ -11,8 +11,9 @@ export default function Protocol({ matches }) {
     return (
         <div className="ProtocolComponent">
             <div className='dynamicTitle'>
-                <p className="SectionTitle">PROTOCOLO</p>
-                {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+            {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+                <p className="SectionTitle"><b>PROTOCOLO</b></p>
+                {matches && <img src={branch} className="dynamicImage dynamicImageRotate" alt="logo" />}
             </div>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor, width: dividerWidth }} />
             <div className='notAllow'>
@@ -22,11 +23,11 @@ export default function Protocol({ matches }) {
             </div>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor, width: dividerWidth }} />
             <div className='dresscodeSection'>
-                <p className="ProtocolDescription">Bussiness Casual</p>
+                <p className="ProtocolDescription">Formal</p>
                 <p className="ProtocolDescription">Vestido Largo Formal</p>
             </div>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor, width: smallDivider }} />
-            <p className='notAllow'>Por seguridad de las infancias no se permitirán niños.</p>
+            <p className='notAllow'>Nuestra celebración será exclusivamente para adultos, agradecemos tu comprensión</p>
         </div>
     )
 }

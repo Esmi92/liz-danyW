@@ -2,21 +2,114 @@
 .LandingPage {
   text-align: center;
   height: 100vh;
-  background-image: url('./assets/pattern.png');
-  background-color: #FCFBFA;
-  font-family: 'Goudy Bookletter 1911';
-  color: #0b2c55;
+  /*background-image: url('./assets/pattern.png');*/
+  background-color: #FFFFFF;
 }
 
 ::-ms-reveal {
   display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.initialText{
+  font-size: 3vh;
 }
 
+.mainLogo{
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.topLogo{
+  font-family: 'Daydream';
+  font-size: 7vh;
+  text-shadow: rgb(5, 5, 5) 0px 0px 5px;
+}
+
+.mainLogoNames{
+  font-family: 'Daydream';
+  font-size: 9vh;
+}
+
+.mainLogoAnd{
+  font-family: 'Anaheim';
+  font-size: 5vh;
+  font-style: italic;
+}
+
+.smallLogo{
+  color: #FFFFFF;
+  display: flex;
+  align-items:center;
+  justify-content: space-evenly;
+  width: 30%;
+  font-family: 'Alex Brush';
+  font-size: 4vh;
+}
+
+.mainDate{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.mainDateInvitation{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.dateDay{
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 3px solid #9D7F63;
+  border-right: 3px solid #9D7F63;
+  font-family: 'PT Serif';
+}
+.dateMonth{
+  padding-right: 10px;
+  font-family: 'PT Serif';
+
+}
+.dateYear{
+  padding-left: 10px;
+  font-family: 'PT Serif';
+}
+
+.dateDaySize{
+  font-size: 9vh;
+}
+
+.dateGnrlSize{
+  font-size: 5vh;
+}
+
+.dateDaySizeInvitation{
+  font-size: 7vh;
+}
+
+.dateGnrlSizeInvitation{
+  font-size: 4vh;
+}
+.flowers{
+  height: 30vh;
+}
+
+.fTop{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.fDowm{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  rotate: 180deg;
+}
 
 .welcome {
   display: flex;
@@ -39,7 +132,6 @@
 }
 
 .appFooter {
-  font-family: 'Barlow';
   padding-top: 5px;
   padding-bottom: 10px;
   font-size: 2vh;
@@ -59,8 +151,17 @@
     height: 60vmin;
     pointer-events: none;
   }
-}
 
+.flowers{
+  height: 20vh;
+}
+.mainLogo{
+  margin-right: 20px;
+}
+.topLogo{
+  font-size: 4.5vh;
+}
+}
 
 /*---Invitation Page----*/
 .invitation {
@@ -68,8 +169,8 @@
 }
 
 .frontInvitation {
-  background-image: url('./assets/pattern.png');
-  background-color: #FCFBFA;
+  /*background-image: url('./assets/pattern.png');*/
+  background-color: #FFFFFF;
   ;
 }
 
@@ -78,37 +179,11 @@
   position: sticky;
   z-index: 5000;
   top: 0;
-  background-color: #0b2c55;
+  background-color: #9D7F63;
 }
 
 .MainContentContainer {
   z-index: 1000;
-}
-
-.logoSectionMobil{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoInvitationMobil {
-  height: 3vh;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-.logoInvitationMobil2 {
-  height: 4vh;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.logoInvitationDesktop{
-  height: 10vh;
 }
 
 @media only screen and (max-width:600px) {
