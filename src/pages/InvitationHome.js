@@ -16,10 +16,10 @@ import Gifts from './components/Gifts';
 import Quote from './components/Quote';
 import Rsvp from './components/Rsvp';
 
+import { TopLogoInvitation, SmallLogo } from './components/MainLogo';
+
 import celImage from '../assets/mainMobile.jpg';
-import liz from '../assets/liz.svg';
-import and from '../assets/and.svg';
-import dany from '../assets/dany.svg';
+import desktopImage from '../assets/headerImage.jpg'
 import './components/Components.css';
 
 function InvitationHome() {
@@ -35,8 +35,7 @@ function InvitationHome() {
   const DressCodeRef = useRef(null);
   const RSVPRef = useRef(null);
 
-  const photo = celImage 
-  //matches ? celImage : desktopImage;
+  const photo = matches ? celImage : desktopImage;
   const menuFont = ipad ? "2vh" : "3vh";
 
   useEffect(() => {
@@ -75,7 +74,7 @@ function InvitationHome() {
     <Tab {...props} />
   ))(({ theme }) => ({
     textTransform: 'none',
-    fontFamily: 'Barlow',
+    fontFamily: 'Cormorant Garamond',
     fontSize: menuFont,
     maxWidth: 'none',
     color: '#f9f7f3',
@@ -89,14 +88,9 @@ function InvitationHome() {
       <div className='PhotoContainer'>
         <div className='photoComponent'>
           <img className='photo' src={photo} alt="Liz y Dany" />
-          {!matches && <img className='photo' src={photo} alt="Liz y Dany" />}
           <div className='titleContainer'>
             <div className='title'>
-            <div className='logoSectionMobil'>
-              <img src={liz} alt='logo' className='logoInvitationMobil2' />
-              <img src={and} alt='logo' className='logoInvitationMobil' />
-              <img src={dany} alt='logo' className='logoInvitationMobil' />
-            </div>
+              <TopLogoInvitation />
             </div>
           </div>
         </div>
@@ -107,12 +101,7 @@ function InvitationHome() {
         </div>
         <div className='MenuDiv'>
           {matches ?
-            <div className='logoSectionMobil'>
-              <img src={liz} alt='logo' className='logoInvitationMobil2' />
-              <img src={and} alt='logo' className='logoInvitationMobil' />
-              <img src={dany} alt='logo' className='logoInvitationMobil' />
-
-            </div>
+             <SmallLogo/>
             :
             <Tabs
               centered

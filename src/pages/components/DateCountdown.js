@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { MainDate } from "./Date";
 
 export default function DateCountdown(props) {
 
@@ -38,9 +39,9 @@ export default function DateCountdown(props) {
 
     return (
         <div className='dateHourContainer'>
+            <MainDate />
             <div className='detailsDate'>
-                28 de Septiembre de 2024<br />
-                17:30
+                03:00pm
             </div>
             {
                 weddingDate < now ?

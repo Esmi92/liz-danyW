@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import whatsIcon from '../../assets/whats.svg';
-import liz from '../../assets/lizRsvp.svg';
-import dany from '../../assets/danyRsvp.svg';
 import branch from '../../assets/branch.svg';
 
 const mainColor = '#0b2c55';
@@ -44,11 +42,12 @@ export default function Rsvp({ matches }) {
     }, [name, lastName])
     return (
         <div className='rsvp'>
-            {!matches && <img src={liz} className="rsvpLogo2" alt="logo" />}
+            {/*!matches && <img src={liz} className="rsvpLogo2" alt="logo" />*/}
             <div className='rsvpSection'>
                 <div className='dynamicTitle'>
-                    <p className="SectionTitle">R.S.V.P.</p>
-                    {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+                {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+                    <p className="SectionTitle"><b>R.S.V.P.</b></p>
+                    {matches && <img src={branch} className="dynamicImage dynamicImageRotate" alt="logo" />}
                 </div>
                 <div className='rsvpCard CardComponent'>
                     <TextField label="Nombre" fullWidth id="margin-none" onChange={(e) => { onChange(e, "name") }} value={name} />
@@ -59,14 +58,14 @@ export default function Rsvp({ matches }) {
                         size="large"
                         style={{
                             backgroundColor: disabled ? secondColor : mainColor,
-                            fontFamily: "Barlow"
+                            fontFamily: "Cormorant Garamond"
 
                         }} endIcon={<img src={whatsIcon} className="whatsIcon" alt="logo" />}>
                         {disabled ? "completa información" : "Confirmar"}
                     </Button>
                 </div>
             </div>
-            {!matches && <img src={dany} className="rsvpLogo" alt="logo" />}
+            {/*!matches && <img src={dany} className="rsvpLogo" alt="logo" />*/}
         </div>
     )
 }
