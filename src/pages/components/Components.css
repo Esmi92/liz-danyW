@@ -230,11 +230,11 @@
     height: 68vh;
     object-fit: cover;
     object-position: 0 50%;
-    animation: fadeIn 1000ms;
+    /* animation: fadeIn 1000ms;
     -webkit-animation: fadeIn 1000ms;
     -moz-animation: fadeIn 1000ms;
     -o-animation: fadeIn 1000ms;
-    -ms-animation: fadeIn 1000ms;
+    -ms-animation: fadeIn 1000ms; */
 }
 
 
