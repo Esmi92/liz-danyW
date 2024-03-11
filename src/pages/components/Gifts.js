@@ -7,39 +7,50 @@ const mainColor = '#0b2c55';
 const buttonColor = '#bb72a2';
 const iconFontSize = "9vh";
 
-const liverpool = (
-    <Button variant="contained" fullWidth
-    size="large"
-    style={{
-        fontFamily: "Cormorant Garamond",
-        backgroundColor: buttonColor
-    }}>
-   <b>Liverpool</b> 
-</Button>
-);
+const clickFunction = (url) => {
+    window.open(url, "_blank");
+};
+
+// const liverpool = (
+//     <Button variant="contained" fullWidth
+//         size="large"
+//         style={{
+//             fontFamily: "Cormorant Garamond",
+//             backgroundColor: buttonColor
+//         }}>
+//         <b>Liverpool</b>
+//     </Button>
+// );
 
 const experiencias = (
     <Button variant="contained" fullWidth
-    size="large"
-    style={{
-        fontFamily: "Cormorant Garamond",
-        backgroundColor: buttonColor
-    }}>
-    <b>Experiencias</b>
-</Button>
+        size="large"
+        onClick={() => {
+            const link = 'https://zepika.com/pages/boda-liz-dani';
+            clickFunction(link)
+        }}
+        style={{
+            fontFamily: "Cormorant Garamond",
+            backgroundColor: buttonColor
+        }}>
+        <b>Zepika-Regalos</b>
+    </Button>
 );
 const mesa = {
-    title: 'Regalos',
+    title: 'Detalles para los novios',
     icon: <CardGiftcardIcon style={{ fontSize: iconFontSize, color: mainColor }}></CardGiftcardIcon>,
-    description: <div className='giftButtons'>{liverpool}{experiencias}</div>,
+    description: <div className='giftButtons'>{experiencias}</div>,
 }
 
 const banco = {
     title: 'Fondo para casa',
-    identifier: 'CLABE: XXXX XXXX XXXX XXXX XX',
+    identifier: <>
+        <p><b>Cuenta</b>: 279 563 9727</p>
+        <p><b>CLABE</b>: 0121 8002 7956 397279</p>
+    </>,
     icon: <PaymentsIcon style={{ fontSize: iconFontSize, color: mainColor }}></PaymentsIcon>,
-    description: <p className='GiftText'>Banco: BBVA <br/>Concepto: Regalo Bodas <br></br> Porfavor incluye tu nombre en el concepto </p>,
-    accountHolderName: 'Nombre: Lizzete',
+    description: <p className='GiftText'><b>Banco</b>: BBVA <br /><b>Concepto</b>: Regalo Bodas <br></br> Porfavor incluye tu nombre en el concepto </p>,
+    accountHolderName: <><b>Nombre</b>: Lizzete Geraldine Chávez Zaldívar</>
 }
 
 export default function Gifts({ matches }) {
@@ -59,7 +70,7 @@ export default function Gifts({ matches }) {
     return (
         <div>
             <div className='dynamicTitle'>
-            {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+                {matches && <img src={branch} className="dynamicImage" alt="logo" />}
                 <p className="SectionTitle"><b>REGALOS</b></p>
                 {matches && <img src={branch} className="dynamicImage dynamicImageRotate" alt="logo" />}
             </div>

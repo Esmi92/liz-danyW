@@ -307,7 +307,7 @@
     flex-direction: column;
 }
 
-.puntaLunaLogo{
+.puntaLunaLogo {
     height: 10vh;
 }
 
@@ -338,7 +338,7 @@
     text-align: center;
 }
 
-.VenueDetails{
+.VenueDetails {
     font-size: 2.5vh;
     font-weight: 400;
     text-align: center;
@@ -430,14 +430,20 @@
     text-align: center;
 }
 
-.dresscodeSection {
-    width: 50%;
+.dresscode{
     display: flex;
-    justify-content: space-between;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
 
 @media only screen and (max-width:600px) {
     .notAllow {
+        width: 100%;
+    }
+
+    .womenDresscode{
         width: 100%;
     }
 
@@ -569,6 +575,7 @@
 .GiftText {
     text-align: center;
     margin: 5px;
+    font-size: 2.3vh;
 }
 
 .CardsSection {
@@ -585,7 +592,7 @@
     text-align: center;
 }
 
-.giftButtons{
+.giftButtons {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -622,6 +629,11 @@
     padding-right: 25px;
 }
 
+.rsvpNames{
+    font-family: 'Daydream';
+    font-size: 7vh;
+}
+
 .whatsIcon {
     height: 3vh;
 }
@@ -641,17 +653,17 @@
 
 /*---  Dynamic Title---*/
 
-.dynamicTitle{
+.dynamicTitle {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-.dynamicImage{
+.dynamicImage {
     height: 10vh;
 }
 
-.dynamicImageRotate{
+.dynamicImageRotate {
     rotate: 180deg;
 }

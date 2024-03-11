@@ -101,7 +101,7 @@ function InvitationHome() {
         </div>
         <div className='MenuDiv'>
           {matches ?
-             <SmallLogo/>
+            <SmallLogo />
             :
             <Tabs
               centered

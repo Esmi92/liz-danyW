@@ -5,10 +5,8 @@ import VenuePhotoURL3 from '../../assets/venue3.PNG';
 
 import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
-import PublicIcon from '@mui/icons-material/Public';
 import ChurchIcon from '@mui/icons-material/Church';
 import LocalBarIcon from '@mui/icons-material/LocalBar';
-import FlatwareIcon from '@mui/icons-material/Flatware';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import IconButton from '@mui/material/IconButton';
@@ -69,7 +67,7 @@ function Itinerary() {
                     <LocalBarIcon style={{ fontSize: "9vh", color: mainColor }} />
                 </Grid>
             </Grid>
-            
+
         </div >
     )
 }
@@ -78,35 +76,35 @@ export default function VenueComponent({ matches }) {
     return (
         <div className='VenueComponent'>
             <div className='itinerarySection'>
-            <div className='address'>
-                <div className='VenueDescriptionContainer'>
-                    <img src={puntaLuna} className="puntaLunaLogo" alt="puntaLuna" />
-                    <p className='VenueDescription'>
-                        <b>Punta Luna by Grupo Paraiso</b><br />
-                    </p>
-                    <p className='VenueDetails'>
-                        <div>Jiutepec 476,<br /> Jose G. Parres,<br />62564 Jiutepec, Mor</div><br />
-                    </p>
-                    <div>
-                        <Tooltip title="Instagram">
-                            <IconButton onClick={onClick}>
-                                <InstagramIcon style={{ fontSize: "6vh", color: mainColor }} />
-                            </IconButton>
-                        </Tooltip>
-                        <Tooltip title="Maps">
-                            <IconButton onClick={() => { onClick("map") }}>
-                                <LocationOnIcon style={{ fontSize: "6vh", color: mainColor }} />
-                            </IconButton>
-                        </Tooltip>
+                <div className='address'>
+                    <div className='VenueDescriptionContainer'>
+                        <img src={puntaLuna} className="puntaLunaLogo" alt="puntaLuna" />
+                        <p className='VenueDescription'>
+                            <b>Punta Luna by Grupo Paraiso</b><br />
+                        </p>
+                        <p className='VenueDetails'>
+                            <div>Jiutepec 476,<br /> Jose G. Parres,<br />62564 Jiutepec, Mor</div><br />
+                        </p>
+                        <div>
+                            <Tooltip title="Instagram">
+                                <IconButton onClick={onClick}>
+                                    <InstagramIcon style={{ fontSize: "6vh", color: mainColor }} />
+                                </IconButton>
+                            </Tooltip>
+                            <Tooltip title="Maps">
+                                <IconButton onClick={() => { onClick("map") }}>
+                                    <LocationOnIcon style={{ fontSize: "6vh", color: mainColor }} />
+                                </IconButton>
+                            </Tooltip>
+                        </div>
                     </div>
-                </div>
-                {!matches ? <Map /> : ''}
+                    {!matches ? <Map /> : ''}
 
-            </div>
+                </div>
             </div>
             <Divider style={{ marginBottom: 15, marginTop: 15 }} variant='middle' />
             <div className='itinerarySection'>
-            <div className='itineraryandCarousel'>
+                <div className='itineraryandCarousel'>
                     <Itinerary />
                 </div>
                 <div className='itineraryandCarousel carousel'>
@@ -121,8 +119,8 @@ export default function VenueComponent({ matches }) {
                         <SwiperSlide><CarouselCard img={VenuePhotoURL3} /></SwiperSlide>
                     </Swiper>
                 </div>
-                </div>
-           
+            </div>
+
         </div>
     )
 }

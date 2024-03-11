@@ -43,14 +43,14 @@ function LandingPage() {
     }
     return (
         <div className="LandingPage">
-        <img src={flores} className='flowers fTop'/>
+            <img src={flores} className='flowers fTop' alt="flowersImage"/>
             <header className="welcome">
                 <MainLogo />
                 <div>
-                    <p className='initialText' >Con la bendicion de Dios 
-                        <br /> y nuestras familias 
-                        <br/> tenemos el gusto de 
-                        <br/> invitarte a nuestra boda</p>
+                    <p className='initialText' >Con la bendicion de Dios
+                        <br /> y nuestras familias
+                        <br /> tenemos el gusto de
+                        <br /> invitarte a nuestra boda</p>
                     <Date />
                     <TextField
                         onChange={onChange}
@@ -68,10 +68,10 @@ function LandingPage() {
                             borderRadius: "5px",
                             "& .MuiOutlinedInput-root": {
                                 "&.Mui-focused fieldset": {
-                                  borderColor: "#9D7F63"
+                                    borderColor: "#9D7F63"
                                 },
                                 fontFamily: "Cormorant Garamond"
-                              }
+                            }
                         }}
                         InputProps={{
                             endAdornment: <InputAdornment position="end">
@@ -114,7 +114,7 @@ function LandingPage() {
                     />
                 </div>
             </header>
-            <img src={flores} className='flowers fDowm'/>
+            <img src={flores} className='flowers fDowm' alt="flowersImage"/>
             <Footer />
         </div>
     );

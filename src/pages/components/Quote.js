@@ -6,7 +6,7 @@ export default function Quote() {
     <div className="QuoteDiv">
       <MainLogo />
       <div>
-        <p className="QuoteText">Cada Familia tiene una historia <br/> <b>Bienvenidos a la nuestra</b></p>
+        <p className="QuoteText">Cada Familia tiene una historia <br /> <b>Bienvenidos a la nuestra</b></p>
         <p className="QuoteAuthor"></p>
       </div>
     </div>

@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import whatsIcon from '../../assets/whats.svg';
 import branch from '../../assets/branch.svg';
 
-const mainColor = '#0b2c55';
-const secondColor = '#c7d6e2';
+const mainColor = '#bb72a2';
+const secondColor = '#E7D2E0';
 var regex = /^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/;
 
 export default function Rsvp({ matches }) {
@@ -23,8 +23,8 @@ export default function Rsvp({ matches }) {
 
     const onClick = () => {
         const space = "%20";
-        const message = `Hola,${space}soy${space}${name}${space}${lastName}${space}quiero${space}confirmar${space}mi${space}asistencia${space}a${space}la${space}boda${space}de${space}Lizzete${space}y${space}Daniel,${space}para${space}la${space}fecha${space}del${space}28/09/2024.${space}Muchas${space}gracias`;
-        const url = `https://wa.me/525548573495?text=${message}`;
+        const message = `Hola,${space}soy${space}${name}${space}${lastName}${space}quiero${space}confirmar${space}mi${space}asistencia${space}a${space}la${space}boda${space}de${space}Lizzete${space}y${space}Daniel,${space}para${space}la${space}fecha${space}del${space}28/sept/2024.${space}Muchas${space}gracias`;
+        const url = `https://wa.me/527771985078?text=${message}`;
         window.open(url, "_blank");
         setName('');
         setLastName('');
@@ -42,11 +42,11 @@ export default function Rsvp({ matches }) {
     }, [name, lastName])
     return (
         <div className='rsvp'>
-            {/*!matches && <img src={liz} className="rsvpLogo2" alt="logo" />*/}
+           { !matches && <p className='rsvpNames'>Lizzete</p> }
             <div className='rsvpSection'>
                 <div className='dynamicTitle'>
-                {matches && <img src={branch} className="dynamicImage" alt="logo" />}
-                    <p className="SectionTitle"><b>R.S.V.P.</b></p>
+                    {matches && <img src={branch} className="dynamicImage" alt="logo" />}
+                    <p className="SectionTitle"><b>Confirma tu asistencia</b></p>
                     {matches && <img src={branch} className="dynamicImage dynamicImageRotate" alt="logo" />}
                 </div>
                 <div className='rsvpCard CardComponent'>
@@ -65,7 +65,7 @@ export default function Rsvp({ matches }) {
                     </Button>
                 </div>
             </div>
-            {/*!matches && <img src={dany} className="rsvpLogo" alt="logo" />*/}
+           { !matches && <p className='rsvpNames'>Daniel</p>}
         </div>
     )
 }

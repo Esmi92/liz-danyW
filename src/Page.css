@@ -10,11 +10,11 @@
   display: none;
 }
 
-.initialText{
+.initialText {
   font-size: 3vh;
 }
 
-.mainLogo{
+.mainLogo {
   margin-right: 50px;
   display: flex;
   flex-direction: column;
@@ -22,89 +22,92 @@
   justify-content: center;
 }
 
-.topLogo{
+.topLogo {
   font-family: 'Daydream';
   font-size: 7vh;
   text-shadow: rgb(5, 5, 5) 0px 0px 5px;
 }
 
-.mainLogoNames{
+.mainLogoNames {
   font-family: 'Daydream';
   font-size: 9vh;
 }
 
-.mainLogoAnd{
+.mainLogoAnd {
   font-family: 'Anaheim';
   font-size: 5vh;
   font-style: italic;
 }
 
-.smallLogo{
+.smallLogo {
   color: #FFFFFF;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-evenly;
   width: 30%;
   font-family: 'Alex Brush';
   font-size: 4vh;
 }
 
-.mainDate{
+.mainDate {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.mainDateInvitation{
+.mainDateInvitation {
   display: flex;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.dateDay{
+.dateDay {
   padding-left: 10px;
   padding-right: 10px;
   border-left: 3px solid #9D7F63;
   border-right: 3px solid #9D7F63;
   font-family: 'PT Serif';
 }
-.dateMonth{
+
+.dateMonth {
   padding-right: 10px;
   font-family: 'PT Serif';
 
 }
-.dateYear{
+
+.dateYear {
   padding-left: 10px;
   font-family: 'PT Serif';
 }
 
-.dateDaySize{
+.dateDaySize {
   font-size: 9vh;
 }
 
-.dateGnrlSize{
+.dateGnrlSize {
   font-size: 5vh;
 }
 
-.dateDaySizeInvitation{
+.dateDaySizeInvitation {
   font-size: 7vh;
 }
 
-.dateGnrlSizeInvitation{
+.dateGnrlSizeInvitation {
   font-size: 4vh;
 }
-.flowers{
+
+.flowers {
   height: 30vh;
 }
 
-.fTop{
+.fTop {
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-.fDowm{
+.fDowm {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -152,15 +155,17 @@
     pointer-events: none;
   }
 
-.flowers{
-  height: 20vh;
-}
-.mainLogo{
-  margin-right: 20px;
-}
-.topLogo{
-  font-size: 4.5vh;
-}
+  .flowers {
+    height: 20vh;
+  }
+
+  .mainLogo {
+    margin-right: 20px;
+  }
+
+  .topLogo {
+    font-size: 4.5vh;
+  }
 }
 
 /*---Invitation Page----*/
@@ -193,6 +198,6 @@
   }
 }
 
-.stdAdress{
-  font-size:medium;
+.stdAdress {
+  font-size: medium;
 }
