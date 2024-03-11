@@ -112,6 +112,7 @@
   bottom: 0px;
   right: 0px;
   rotate: 180deg;
+  z-index: 0;
 }
 
 .welcome {

@@ -65,6 +65,7 @@ function LandingPage() {
                         variant="outlined"
                         sx={{
                             opacity: 1.5,
+                            'z-index': 3,
                             borderRadius: "5px",
                             "& .MuiOutlinedInput-root": {
                                 "&.Mui-focused fieldset": {
