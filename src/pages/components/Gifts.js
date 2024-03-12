@@ -27,7 +27,7 @@ const liverpool = (
             }}>
             <b>Liverpool</b>
         </Button>
-        <p>Buscar con número de mesa 51407739</p>
+        <p><b>Buscar con número de evento 51407739</b></p>
     </div>
 );
 
