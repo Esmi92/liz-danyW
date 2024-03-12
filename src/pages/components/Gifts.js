@@ -1,6 +1,7 @@
 import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 import branch from '../../assets/branch.svg';
 
 const mainColor = '#0b2c55';
@@ -11,16 +12,24 @@ const clickFunction = (url) => {
     window.open(url, "_blank");
 };
 
-// const liverpool = (
-//     <Button variant="contained" fullWidth
-//         size="large"
-//         style={{
-//             fontFamily: "Cormorant Garamond",
-//             backgroundColor: buttonColor
-//         }}>
-//         <b>Liverpool</b>
-//     </Button>
-// );
+const liverpool = (
+    <div>
+
+        <Button variant="contained" fullWidth
+            size="large"
+            onClick={() => {
+                const link = 'https://mesaderegalos.liverpool.com.mx/eventodebusqueda';
+                clickFunction(link)
+            }}
+            style={{
+                fontFamily: "Cormorant Garamond",
+                backgroundColor: buttonColor
+            }}>
+            <b>Liverpool</b>
+        </Button>
+        <p>Buscar con número de mesa 51407739</p>
+    </div>
+);
 
 const experiencias = (
     <Button variant="contained" fullWidth
@@ -31,7 +40,8 @@ const experiencias = (
         }}
         style={{
             fontFamily: "Cormorant Garamond",
-            backgroundColor: buttonColor
+            backgroundColor: buttonColor,
+            marginTop: '3vh'
         }}>
         <b>Zepika-Regalos</b>
     </Button>
@@ -39,7 +49,11 @@ const experiencias = (
 const mesa = {
     title: 'Detalles para los novios',
     icon: <CardGiftcardIcon style={{ fontSize: iconFontSize, color: mainColor }}></CardGiftcardIcon>,
-    description: <div className='giftButtons'>{experiencias}</div>,
+    description: <div className='giftButtons'>
+        {liverpool}
+        <Divider variant='middle' style={{ borderWidth: 1 }} />
+        {experiencias}
+    </div>,
 }
 
 const banco = {

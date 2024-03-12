@@ -227,7 +227,7 @@
 
 .photo {
     width: 100%;
-    height: 68vh;
+    height: 80vh;
     object-fit: cover;
     object-position: 0 50%;
     /* animation: fadeIn 1000ms;
@@ -241,6 +241,7 @@
 @media only screen and (max-width:600px) {
     .photo {
         width: 100%;
+        height: 68vh;
         object-position: 0 30%;
     }
 }
@@ -597,7 +598,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-content: space-around;
-    height: 70%;
+    height: 20vh;
 }
 
 @media only screen and (max-width:600px) {

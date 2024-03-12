@@ -21,9 +21,21 @@ export default function Rsvp({ matches }) {
         }
     }
 
-    const onClick = () => {
-        const space = "%20";
-        const message = `Hola,${space}soy${space}${name}${space}${lastName}${space}quiero${space}confirmar${space}mi${space}asistencia${space}a${space}la${space}boda${space}de${space}Lizzete${space}y${space}Daniel,${space}para${space}la${space}fecha${space}del${space}28/sept/2024.${space}Muchas${space}gracias`;
+    const space = "%20";
+    
+    const confirmar = `Hola,${space}soy${space}${name}${space}${lastName}${space}quiero${space}
+    confirmar${space}mi${space}asistencia${space}a${space}la${space}boda${space}de${space}
+    Lizzete${space}y${space}Daniel,${space}para${space}la${space}fecha${space}del${space}
+    28/sept/2024.${space}Muchas${space}gracias`;
+
+    const declinar = `Hola,${space}soy${space}${name}${space}${lastName}${space}fui${space}
+    invitado${space}a${space}la${space}boda${space}de${space}
+    Lizzete${space}y${space}Daniel,${space}el${space}
+    28/sept/2024.${space}Pero${space}desafortunadamente${space}No${space}podré${space}
+    asistir${space}y${space}quiero${space}declinar${space}la${space}invitación${space},gracias`;
+
+    const onClick = (type) => {
+        const message = type === 'confirmar' ? confirmar : declinar;
         const url = `https://wa.me/527771985078?text=${message}`;
         window.open(url, "_blank");
         setName('');
@@ -54,15 +66,25 @@ export default function Rsvp({ matches }) {
                     <TextField label="Apellido" fullWidth id="margin-none" onChange={(e) => { onChange(e, "lastName") }} value={lastName} />
                     <Button variant="contained" fullWidth
                         disabled={disabled}
-                        onClick={onClick}
+                        onClick={()=>{onClick('confirmar')}}
                         size="large"
                         style={{
                             backgroundColor: disabled ? secondColor : mainColor,
                             fontFamily: "Cormorant Garamond"
 
                         }} endIcon={<img src={whatsIcon} className="whatsIcon" alt="logo" />}>
-                        {disabled ? "completa información" : "Confirmar"}
+                       <b>{disabled ? "completa información" : "Confirmar"}</b> 
                     </Button>
+                    {!disabled && <Button variant="contained" fullWidth
+                        onClick={onClick}
+                        size="large"
+                        style={{
+                            backgroundColor: mainColor,
+                            fontFamily: "Cormorant Garamond"
+
+                        }} endIcon={<img src={whatsIcon} className="whatsIcon" alt="logo" />}>
+                        No Podre Asistir
+                    </Button>}
                 </div>
             </div>
            { !matches && <p className='rsvpNames'>Daniel</p>}
