@@ -23,16 +23,9 @@ export default function Rsvp({ matches }) {
 
     const space = "%20";
     
-    const confirmar = `Hola,${space}soy${space}${name}${space}${lastName}${space}quiero${space}
-    confirmar${space}mi${space}asistencia${space}a${space}la${space}boda${space}de${space}
-    Lizzete${space}y${space}Daniel,${space}para${space}la${space}fecha${space}del${space}
-    28/sept/2024.${space}Muchas${space}gracias`;
+    const confirmar = `Hola,${space}soy${space}${name}${space}${lastName}${space}quiero${space}confirmar${space}mi${space}asistencia${space}a${space}la${space}boda${space}de${space}Lizzete${space}y${space}Daniel,${space}para${space}la${space}fecha${space}del${space}28/sept/2024.${space}Muchas${space}gracias`;
 
-    const declinar = `Hola,${space}soy${space}${name}${space}${lastName}${space}fui${space}
-    invitado${space}a${space}la${space}boda${space}de${space}
-    Lizzete${space}y${space}Daniel,${space}el${space}
-    28/sept/2024.${space}Pero${space}desafortunadamente${space}No${space}podré${space}
-    asistir${space}y${space}quiero${space}declinar${space}la${space}invitación${space},gracias`;
+    const declinar = `Hola,${space}soy${space}${name}${space}${lastName}${space}recibí${space}invitación${space}a${space}la${space}boda${space}de${space}Lizzete${space}y${space}Daniel,${space}el${space}28/sept/2024.${space}Pero${space}desafortunadamente${space}No${space}podré${space}asistir${space}y${space}quiero${space}declinar${space}la${space}invitación${space},gracias`;
 
     const onClick = (type) => {
         const message = type === 'confirmar' ? confirmar : declinar;
