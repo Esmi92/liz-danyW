@@ -6,7 +6,7 @@ import branch from '../../assets/branch.svg';
 
 const mainColor = '#bb72a2';
 const secondColor = '#E7D2E0';
-var regex = /^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/;
+var regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+(?:[\s.]+[a-zA-Z]+)*$/;
 
 export default function Rsvp({ matches }) {
     const [name, setName] = useState('')
@@ -51,7 +51,7 @@ export default function Rsvp({ matches }) {
             <div className='rsvpSection'>
                 <div className='dynamicTitle'>
                     {matches && <img src={branch} className="dynamicImage" alt="logo" />}
-                    <p className="SectionTitle"><b>Confirma tu asistencia</b></p>
+                    <p className="SectionTitle"><b>Favor de confirmar o declinar tu asistencia</b></p>
                     {matches && <img src={branch} className="dynamicImage dynamicImageRotate" alt="logo" />}
                 </div>
                 <div className='rsvpCard CardComponent'>
