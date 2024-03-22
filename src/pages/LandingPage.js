@@ -47,7 +47,7 @@ function LandingPage() {
             <header className="welcome">
                 <MainLogo />
                 <div>
-                    <p className='initialText' >Con la bendicion de Dios
+                    <p className='initialText' >Con la bendición de Dios
                         <br /> y nuestras familias
                         <br /> tenemos el gusto de
                         <br /> invitarte a nuestra boda</p>
