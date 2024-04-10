@@ -36,9 +36,10 @@ export default function Protocol({ matches }) {
             <div className='dresscode'>
             <Man4Icon style={{ fontSize: "6vh", color: mainColor }} />
             <Divider orientation="vertical" style={{ borderColor: mainColor, height: horizontalDivider }} />
+            <p>Formal</p>
+            <Divider orientation="vertical" style={{ borderColor: mainColor, height: horizontalDivider }} />
                 <div>
                     <p>No Guayabera</p>
-                    <p>No Tenis</p>
                 </div>
             </div>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor, width: dividerWidth }} />

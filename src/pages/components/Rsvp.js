@@ -6,7 +6,7 @@ import branch from '../../assets/branch.svg';
 
 const mainColor = '#bb72a2';
 const secondColor = '#E7D2E0';
-var regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+(?:[\s.]+[a-zA-Z]+)*$/;
+var regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s-.]*$/;
 
 export default function Rsvp({ matches }) {
     const [name, setName] = useState('')
