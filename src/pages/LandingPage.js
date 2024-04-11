@@ -48,6 +48,9 @@ function LandingPage() {
                     <Button variant="contained" fullWidth
                         onClick={redirect}
                         size="large"
+                        sx={{
+                            'z-index': 3
+                        }}
                         style={{
                             backgroundColor: "#9D7F63",
                             fontFamily: "Cormorant Garamond"

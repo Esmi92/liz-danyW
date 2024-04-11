@@ -56,7 +56,6 @@ function InvitationHome() {
         break;
       default:
     }
-    console.log(newValue);
   };
 
   const StyledTab = styled((props) => (

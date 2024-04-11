@@ -37,7 +37,6 @@ export default function Rsvp({ matches }) {
 
     useEffect(() => {
         const ifRegex = regex.test(name) && regex.test(lastName)
-        console.log('Reg', ifRegex)
         if (name !== '' && lastName !== '' && ifRegex) {
             setDisabled(false)
         } else {

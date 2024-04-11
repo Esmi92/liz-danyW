@@ -47,23 +47,23 @@ function Itinerary() {
         <div>
             <p className='VenueTitle'><b>SABADO 28</b><br /> Jardín Punta Luna</p>
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
-                <Grid xs={8} className='VenueData Itinerary'>
+                <Grid xs={8} className='VenueData Itinerary' item>
                     <b>Ceremonia <br /></b>
                     3:00pm
                 </Grid>
-                <Grid xs={4}>
+                <Grid xs={4} item>
                     <ChurchIcon style={{ fontSize: "9vh", color: mainColor }} />
                 </Grid>
             </Grid>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor }} />
             <Grid container justifyContent="center" alignItems="center" style={{ padding: 30 }}>
-                <Grid xs={8} >
+                <Grid xs={8} item>
                     <div className='VenueData Itinerary'>
                         <b>Coctel<br /></b>
                         4.00pm
                     </div>
                 </Grid>
-                <Grid xs={4}>
+                <Grid xs={4} item>
                     <LocalBarIcon style={{ fontSize: "9vh", color: mainColor }} />
                 </Grid>
             </Grid>
