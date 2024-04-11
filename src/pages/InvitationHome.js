@@ -38,13 +38,6 @@ function InvitationHome() {
   const photo = matches ? celImage : desktopImage;
   const menuFont = ipad ? "2vh" : "3vh";
 
-  useEffect(() => {
-    if (!location.state) {
-      navigate("/")
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
   const handleChange = (e, newValue) => {
     switch (newValue) {
       case 0:

@@ -5,6 +5,7 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
 import { Date } from './components/Date';
 
 import { useNavigate } from "react-router-dom";
@@ -21,17 +22,16 @@ function LandingPage() {
     const [viewPass, setViewPass] = useState(false)
     const navigate = useNavigate();
 
-    const onChange = (e) => {
+/*     const onChange = (e) => {
         setIsError(false)
         setInput(e.target.value)
-    }
+    } */
 
     const redirect = () => {
-        setIsError(false)
-        navigate("/home", { state: input })
+        navigate("/home")
     }
 
-    const redirectEnter = (e) => {
+/*     const redirectEnter = (e) => {
         if (e.key === "Enter" && input === process.env.REACT_APP_PASSWORD) {
             redirect()
         } else if (e.key === "Enter") { setIsError(true) }
@@ -40,7 +40,7 @@ function LandingPage() {
         if (input === process.env.REACT_APP_PASSWORD) {
             redirect()
         } else { setIsError(true) }
-    }
+    } */
     return (
         <div className="LandingPage">
             <img src={flores} className='flowers fTop' alt="flowersImage"/>
@@ -52,7 +52,17 @@ function LandingPage() {
                         <br /> tenemos el gusto de
                         <br /> invitarte a nuestra boda</p>
                     <Date />
-                    <TextField
+                    <Button variant="contained" fullWidth
+                        onClick={redirect}
+                        size="large"
+                        style={{
+                            backgroundColor: "#9D7F63",
+                            fontFamily: "Cormorant Garamond"
+
+                        }}>
+                        Ver invitación
+                    </Button>
+                {/*     <TextField
                         onChange={onChange}
                         onKeyDown={redirectEnter}
                         id="event-password"
@@ -112,7 +122,7 @@ function LandingPage() {
                                 </IconButton>
                             </InputAdornment>,
                         }}
-                    />
+                    /> */}
                 </div>
             </header>
             <img src={flores} className='flowers fDowm' alt="flowersImage"/>

@@ -455,6 +455,10 @@
     .ProtocolDescription {
         font-size: 2.2vh;
     }
+
+    .dresscode{
+        width: 80%;
+    }
 }
 
 /*---HOTELS---*/

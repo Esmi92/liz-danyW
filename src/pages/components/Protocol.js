@@ -7,7 +7,7 @@ const mainColor = '#9D7F63';
 
 export default function Protocol({ matches }) {
     const dividerWidth = matches ? "80%" : "50%";
-    const smallDivider = matches ? "50%" : "30%";
+    const smallDivider = matches ? "80%" : "40%";
     const horizontalDivider = '6vh';
 
     return (
@@ -44,7 +44,7 @@ export default function Protocol({ matches }) {
             </div>
             <Divider variant='middle' style={{ borderWidth: 1, borderColor: mainColor, width: dividerWidth }} />
 
-            <p className='notAllow'>Nuestra celebración será exclusivamente para adultos, agradecemos tu comprensión</p>
+            <p className='notAllow'><div>Nuestra celebración será exclusivamente para adultos, agradecemos tu comprensión <br></br><b>(No niños)</b></div></p>
         </div>
     )
 }
