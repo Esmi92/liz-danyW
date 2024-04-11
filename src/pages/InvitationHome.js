@@ -1,11 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Divider from '@mui/material/Divider';
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
-import { useLocation, useNavigate } from 'react-router-dom';
 
 import DateCountdown from './components/DateCountdown';
 import Venue from './components/Venue';
@@ -23,8 +21,6 @@ import desktopImage from '../assets/headerImage.jpg'
 import './components/Components.css';
 
 function InvitationHome() {
-  const location = useLocation();
-  const navigate = useNavigate();
   const matches = useMediaQuery('(max-width:600px)');
   const ipad = useMediaQuery('(max-width:900px)');
 
