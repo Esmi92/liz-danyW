@@ -1,10 +1,4 @@
 import { useState } from 'react';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import IconButton from '@mui/material/IconButton';
-import VisibilityIcon from '@mui/icons-material/Visibility';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import InputAdornment from '@mui/material/InputAdornment';
-import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import { Date } from './components/Date';
 
@@ -17,9 +11,9 @@ import '../Page.css';
 
 function LandingPage() {
 
-    const [input, setInput] = useState("")
+    /* const [input, setInput] = useState("")
     const [isError, setIsError] = useState(false)
-    const [viewPass, setViewPass] = useState(false)
+    const [viewPass, setViewPass] = useState(false) */
     const navigate = useNavigate();
 
 /*     const onChange = (e) => {
