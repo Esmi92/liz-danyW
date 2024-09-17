@@ -109,7 +109,7 @@
 
 .fDowm {
   position: absolute;
-  bottom: 0px;
+  bottom: -7px;
   right: 0px;
   rotate: 180deg;
   z-index: 0;
